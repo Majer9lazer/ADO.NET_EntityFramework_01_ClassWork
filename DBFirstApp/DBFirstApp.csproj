@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F97257A-79E9-42AD-AF74-7D9C9999957E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBFirstApp</RootNamespace>
+    <AssemblyName>DBFirstApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\AFAnaliz.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AFCity.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AFLab.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AFUser.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AF_Book.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AF_Users.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AT_Citys.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AT_Laboratorys.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AT_Roles.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AT_Tests.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AT_Users.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\book_table.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HmailServer.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HmailServer.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HmailServer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HmailServer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HmailServer.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_accounts.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_acl.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_aliases.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_blocked_attachments.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_dbversion.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_distributionlists.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_distributionlistsrecipients.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_dnsbl.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_domains.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_domain_aliases.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_fetchaccounts.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_fetchaccounts_uids.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_greylisting_triplets.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_greylisting_whiteaddresses.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_groups.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_group_members.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_imapfolders.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_incoming_relays.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_logon_failures.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_messagerecipients.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_messages.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_message_metadata.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_routeaddresses.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_routes.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_rules.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_rule_actions.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_rule_criterias.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_securityranges.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_servermessages.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_settings.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_sslcertificates.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_surblservers.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_tcpipports.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\hm_whitelist.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Operator.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\pn_city.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\pn_laboratory.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\pn_roles.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\pn_tbl_user.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\pn_tests.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Prefix.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RA_Laboratories.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RA_Roles.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RA_Tests.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RA_TestTypes.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RA_Users.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sep_City.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sep_HistoryTestUser.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sep_Laboratory.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sep_Role.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sep_Test.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sep_Users.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SE_Cities.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SE_Laboratories.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SE_Roles.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SE_Users.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\STI_Roles.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\STI_Users.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagram.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tbl_Checks.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tbl_Customers.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tbl_Numbers.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tbl_Operators.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tbl_Prefixes.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZK_Roles.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZK_Users.cs">
+      <DependentUpon>HmailServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Model\HmailServer.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HmailServer.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\HmailServer.edmx.diagram">
+      <DependentUpon>HmailServer.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\HmailServer.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HmailServer.Context.cs</LastGenOutput>
+      <DependentUpon>HmailServer.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\HmailServer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HmailServer.edmx</DependentUpon>
+      <LastGenOutput>HmailServer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
