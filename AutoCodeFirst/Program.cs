@@ -13,6 +13,7 @@ namespace AutoCodeFirst
         static void Main(string[] args)
         {
             MCS db = new MCS();
+
             //db.Database.Log = (s => System.Diagnostics.Debug.WriteLine(s));
             //List<TrackEvaluation> evaluation =
             //    db.TrackEvaluations.Include()
