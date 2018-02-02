@@ -17,6 +17,7 @@ namespace AutoCodeFirst
             //db.Database.Log = (s => System.Diagnostics.Debug.WriteLine(s));
             //List<TrackEvaluation> evaluation =
             //    db.TrackEvaluations.Include()
+
             //явная загрузка
             //var evals = db.TrackEvaluations.Select(s => s).Load() ;
         }
